@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_l_ista_ctivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<hotel.suozhang.com.menu.ui.RefreshLayout
+    android:id="@+id/spl_menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ListView
+        android:id="@+id/lv_menu_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#d6d7dc"/>
+</hotel.suozhang.com.menu.ui.RefreshLayout>
+</RelativeLayout>

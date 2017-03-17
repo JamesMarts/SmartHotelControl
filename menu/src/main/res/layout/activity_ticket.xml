@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:orientation="vertical">
+
+
+    <hotel.suozhang.com.menu.ui.FloatingEditText
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:textColor="@color/drawer_text"
+        android:textSize="20sp"
+        android:hint=""
+        android:singleLine="true"
+      
+        android:text="天水"
+        android:ems="10"
+        android:id="@+id/editText2" />
+
+    <EditText
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="西安"
+        android:ems="10"
+        android:id="@+id/editText3" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:text="2016-11-19"
+        android:layout_marginTop="10dp"
+        android:id="@+id/editText4" />
+
+    <Button
+        android:text="Button"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2" />
+</LinearLayout>

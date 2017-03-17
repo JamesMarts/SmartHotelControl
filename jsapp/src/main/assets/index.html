@@ -1,0 +1,70 @@
+<html>
+<head>
+    <title>Webview capture testing...</title>
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+    <script type="text/javascript">
+$(document).ready(function(){
+    alert('Hi,I am a alert!');
+
+});
+	//android中调用js方法
+	function wave() {
+		alert('cc2');
+	    document.getElementById("droid").innerHTML ="android_waving.png";
+	}
+	function showMsg(msg) {
+		alert(msg);
+		 document.getElementById("blemsg").innerHTML = "" + msg;
+	}
+
+	//android中调用js方法2，并更id为"droid"的span标签的值及新刚拍的照片显示到"pic0"里
+	function wave2(name) {
+		 alert(name);
+		 document.getElementById("droid").innerHTML = "Photopath: " + name;
+		 document.getElementById("pic0").src=name;
+	}
+
+	//html的点击事件，并通过"window.demo.clickOnAndroid"触发android中的clickOnAndroid方法
+	function clickOnHtml () {
+		var fileName = window.callByJs.clickOnAndroid();
+		wave2(fileName);
+
+		var msg=window.callBleByJs.clickOnAndroid()
+		showMsg(msg)
+	}
+
+	//
+	function revert() {
+		alert('cc');
+		document.getElementById("droid").innerHTML ="aa2";
+	}
+
+    </script>
+    <style type="text/css">
+
+
+    </style>
+
+</head>
+<body>
+<div>
+
+    <!--<input type="button" onclick="javascript:window.top.location.reload()" value="刷新" />-->
+
+    <!-- 通过"window.demo.clickOnAndroid"触发android中的clickOnAndroid方法 -->
+    <a href="#" onclick="window.callByJs.clickOnAndroid()"
+       class="button button-big button-fill button-success"><h3>拍 照 测 试</h3></a>
+    <span id='droid'>图片路径:</span><br/>
+
+    <img alt="" id="pic0" width="108" height="172" src=""/>
+</div>
+
+<div>
+
+    <a href="#" id="" onclick="window.callBleByJs.clickOnAndroid()"
+       class=" button button-big button-fill2 button-error"><h3>蓝 牙 测 试</h3></a>
+    <span id='blemsg' class="labela">蓝牙信息:</span>
+
+</div>
+</body>
+</html>
